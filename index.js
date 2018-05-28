@@ -1,4 +1,6 @@
-var restify = require('restify');
+const restify = require('restify');
+const errs = require('restify-errors');
+
 
 const server = restify.createServer({
   name: 'myapp',
@@ -44,6 +46,19 @@ server.post('/create', function (req, res, next) {
   knex('rest').
     insert(req.body).
     then((dados) => {
+      res.send(dados);
+    }, next);
+});
+
+server.get('/show/:id', function (req, res, next) {
+
+  const { id } = req.params;
+
+  knex('rest').
+    where('id', id).
+    first().
+    then((dados) => {
+      if (!dados) return res.send(new errs.BadRequestError('nada foi encontrado'))
       res.send(dados);
     }, next);
 });
