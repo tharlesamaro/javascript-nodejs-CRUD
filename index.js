@@ -62,3 +62,16 @@ server.get('/show/:id', function (req, res, next) {
       res.send(dados);
     }, next);
 });
+
+server.put('/update/:id', function (req, res, next) {
+
+  const { id } = req.params;
+
+  knex('rest').
+    where('id', id).
+    update(req.body).
+    then((dados) => {
+      if (!dados) return res.send(new errs.BadRequestError('nada foi encontrado'))
+      res.send('dados atualizados');
+    }, next);
+});
