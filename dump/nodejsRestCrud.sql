@@ -26,7 +26,7 @@ CREATE TABLE `rest` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +35,7 @@ CREATE TABLE `rest` (
 
 LOCK TABLES `rest` WRITE;
 /*!40000 ALTER TABLE `rest` DISABLE KEYS */;
-INSERT INTO `rest` VALUES (1,'Tharles Amaro'),(2,'Thayna Amaro');
+INSERT INTO `rest` VALUES (1,'José Vilar'),(2,'Thayna Amaro'),(3,'Aucilania Amaro');
 /*!40000 ALTER TABLE `rest` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-28 12:42:55
+-- Dump completed on 2018-05-28 15:12:26
