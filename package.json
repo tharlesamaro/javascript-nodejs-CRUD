@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/tharlesamaro/javascript-nodejs-CRUD#readme",
   "dependencies": {
+    "knex": "^0.14.6",
+    "mysql": "^2.15.0",
     "restify": "^7.2.0",
     "restify-errors": "^6.0.0"
   }
