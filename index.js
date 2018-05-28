@@ -38,3 +38,12 @@ server.get('/', function (req, res, next) {
 
   return next();
 });
+
+server.post('/create', function (req, res, next) {
+
+  knex('rest').
+    insert(req.body).
+    then((dados) => {
+      res.send(dados);
+    }, next);
+});
