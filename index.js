@@ -1,14 +1,19 @@
-const http = require('http');
+var restify = require('restify');
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+const server = restify.createServer({
+  name: 'myapp',
+  version: '1.0.0'
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.use(restify.plugins.acceptParser(server.acceptable));
+server.use(restify.plugins.queryParser());
+server.use(restify.plugins.bodyParser());
+
+server.get('/echo/:name', function (req, res, next) {
+  res.send(req.params);
+  return next();
+});
+
+server.listen(8087, function () {
+  console.log('%s listening at %s', server.name, server.url);
 });

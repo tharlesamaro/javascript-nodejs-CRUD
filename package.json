@@ -1,0 +1,23 @@
+{
+  "name": "js_nodejs_crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tharlesamaro/javascript-nodejs-CRUD.git"
+  },
+  "author": "Tharles Amaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tharlesamaro/javascript-nodejs-CRUD/issues"
+  },
+  "homepage": "https://github.com/tharlesamaro/javascript-nodejs-CRUD#readme",
+  "dependencies": {
+    "restify": "^7.2.0",
+    "restify-errors": "^6.0.0"
+  }
+}
